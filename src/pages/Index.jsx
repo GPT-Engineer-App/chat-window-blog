@@ -38,22 +38,13 @@ const Index = () => {
       </Box>
       <Divider />
       {sampleArticles.map((article, index) => (
-        <Box key={index} p={5} shadow="md" borderWidth="1px" borderRadius="md" bg={bgColor} color={textColor}>
+        <Box key={index} p={5} borderWidth="1px" borderRadius="md" bg="gray.500" color={textColor}>
           <Heading size="md">{article.title}</Heading>
           <Text fontSize="sm">{article.date}</Text>
           <Text mt={4}>{article.excerpt}</Text>
           <Link color="teal.500" href="#">
             Read More
           </Link>
-          <Box mt={8}>
-            <FormControl>
-              <FormLabel htmlFor="email">Subscribe to Newsletter</FormLabel>
-              <Input id="email" type="email" placeholder="Enter your email" />
-              <Button mt={2} rightIcon={<FaEnvelope />}>
-                Subscribe
-              </Button>
-            </FormControl>
-          </Box>
         </Box>
       ))}
       <Divider />
